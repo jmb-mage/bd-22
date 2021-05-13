@@ -10,6 +10,13 @@ import SpriteKit
 
 class BDColor {
     static func getMood(mood : CGPoint) -> SKColor {
+        return SKColor(red:   1,
+                       green: 1 ,
+                       blue:  1 ,
+                       alpha: 1.0)
+    }
+
+    static func getRandomMood(mood : CGPoint) -> SKColor {
         return SKColor(red:   CGFloat(arc4random_uniform(255))/255.0,
                        green: CGFloat(arc4random_uniform(255))/255.0 ,
                        blue:  CGFloat(arc4random_uniform(255))/255.0 ,

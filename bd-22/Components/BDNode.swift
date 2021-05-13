@@ -14,7 +14,10 @@ class BDNode: SKShapeNode {
     static var height: CGFloat = 48
     var mood: CGPoint = CGPoint(x: 0, y: 0)
     var moodV: CGPoint = CGPoint(x: 0, y: 0)
+    var isMoodAnimating:Bool = false
 
+    // Init
+    
     init(pos: CGPoint) {
         #if DEBUG
             print("Adding BDNode \(pos.x) \(pos.y)")
@@ -28,10 +31,6 @@ class BDNode: SKShapeNode {
         self.strokeColor = SKColor.green
         self.fillColor = BDColor.getMood(mood: self.mood)
         self.position = pos
-//        self.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-//            self.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-//                                              SKAction.fadeOut(withDuration: 0.5),
-//                                            SKAction.removeFromParent()]))
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -39,11 +38,15 @@ class BDNode: SKShapeNode {
     }
     
     public func update() {
-        //self.fillColor = BDColor.getMood(mood: self.mood)
+        if(self.isMoodAnimating == false) {
+            self.isMoodAnimating = true
+            self.run(SKAction.BDAnimateColor(
+                        fromColor: self.fillColor,
+                        toColor: BDColor.getRandomMood(mood: self.mood),
+                        duration: 5),
+                     completion: {() -> Void in
+                        self.isMoodAnimating = false
+                    })
+        }
     }
-    
 }
-    
-    
-
-

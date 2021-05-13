@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E648152264D694F00BC1764 /* BDScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E648151264D694F00BC1764 /* BDScreen.swift */; };
+		1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E648153264D759A00BC1764 /* BDAnimateColor.swift */; };
 		1EBD2EF72647427400F92025 /* BDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBD2EF62647427400F92025 /* BDColor.swift */; };
 		1ECD2B362646EF660065247B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD2B352646EF660065247B /* AppDelegate.swift */; };
 		1ECD2B382646EF660065247B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD2B372646EF660065247B /* GameScene.sks */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1E648151264D694F00BC1764 /* BDScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDScreen.swift; sourceTree = "<group>"; };
+		1E648153264D759A00BC1764 /* BDAnimateColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDAnimateColor.swift; sourceTree = "<group>"; };
 		1EBD2EF62647427400F92025 /* BDColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDColor.swift; sourceTree = "<group>"; };
 		1ECD2B322646EF660065247B /* bd-22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bd-22.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECD2B352646EF660065247B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				1ECD2B4C2646F0930065247B /* BDNode.swift */,
 				1EBD2EF62647427400F92025 /* BDColor.swift */,
 				1E648151264D694F00BC1764 /* BDScreen.swift */,
+				1E648153264D759A00BC1764 /* BDAnimateColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				1E648152264D694F00BC1764 /* BDScreen.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
 				1ECD2B3C2646EF660065247B /* GameScene.swift in Sources */,
+				1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */,
 				1ECD2B362646EF660065247B /* AppDelegate.swift in Sources */,
 				1ECD2B4D2646F0930065247B /* BDNode.swift in Sources */,
 			);
