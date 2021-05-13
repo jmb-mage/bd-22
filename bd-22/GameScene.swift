@@ -10,16 +10,21 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var nodes : [BDNode] = []
+    private var screenSize:CGSize = CGSize(width: 0, height: 0)
+    private var offset:CGPoint = CGPoint(x: 0, y: 0)
+    private var nodesX:Int = 0
+    private var nodesY:Int = 0
     
-    override func sceneDidLoad() {
-        self.nodes = []
+    func start(size: CGSize) {
+        self.screenSize = size
+        self.offset = CGPoint(x: -size.width / 4, y: -size.height / 4)
+        self.nodesX = Int(size.width / BDNode.width)
+        self.nodesY = Int(size.height / BDNode.height)
         
         let hw = Int(BDNode.width / 2)
-        let offset = CGPoint(x:-64, y:-128)
-        for y in 0...12 {
-            for x in 0...12 {
-                let pos = CGPoint(x:x * hw + Int(offset.x), y:y * hw + Int(offset.y))
+        for y in 0...self.nodesY {
+            for x in 0...self.nodesX {
+                let pos = CGPoint(x:x * hw + Int(self.offset.x), y:y * hw + Int(self.offset.y))
                 self.addChild(BDNode(pos:pos))
             }
         }
@@ -71,6 +76,10 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        for child in self.children {
+            if let node = child as? BDNode {
+                node.update()
+            }
+        }
     }
 }
