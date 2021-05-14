@@ -15,6 +15,7 @@ class BDNode: SKShapeNode {
     var mood: CGPoint = CGPoint(x: 0, y: 0)
     var moodV: Double = 5
     var isMoodAnimating:Bool = false
+    var taskId: Int = 0
 
     // Init
     
