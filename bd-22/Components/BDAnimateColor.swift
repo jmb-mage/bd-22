@@ -8,9 +8,9 @@
 import Foundation
 import SpriteKit
 
-func lerp(a : CGFloat, b : CGFloat, fraction : CGFloat) -> CGFloat
+func lerp(start : CGFloat, end : CGFloat, fraction : CGFloat) -> CGFloat
 {
-    return (b-a) * fraction + a
+    return (end-start) * fraction + start
 }
 
 struct ColorComponents {
@@ -35,10 +35,10 @@ extension SKAction {
             let fraction = CGFloat(elapsedTime / CGFloat(duration))
             let startColorComponents = fromColor.toComponents()
             let endColorComponents = toColor.toComponents()
-            let transColor = SKColor(red: lerp(a: startColorComponents.red, b: endColorComponents.red, fraction: fraction),
-                                     green: lerp(a: startColorComponents.green, b: endColorComponents.green, fraction: fraction),
-                                     blue: lerp(a: startColorComponents.blue, b: endColorComponents.blue, fraction: fraction),
-                                     alpha: lerp(a: startColorComponents.alpha, b: endColorComponents.alpha, fraction: fraction))
+            let transColor = SKColor(red: lerp(start: startColorComponents.red, end: endColorComponents.red, fraction: fraction),
+                                     green: lerp(start: startColorComponents.green, end: endColorComponents.green, fraction: fraction),
+                                     blue: lerp(start: startColorComponents.blue, end: endColorComponents.blue, fraction: fraction),
+                                     alpha: lerp(start: startColorComponents.alpha, end: endColorComponents.alpha, fraction: fraction))
             (node as? SKShapeNode)?.fillColor = transColor
         }
         )

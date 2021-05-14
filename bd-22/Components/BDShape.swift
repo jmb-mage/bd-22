@@ -13,8 +13,8 @@ protocol BDShapeArray {
 
 class BDShape {
     static let all = 0
-    static let chevron_down = 1
-    static let chevron_up = 2
+    static let chevronDown = 1
+    static let chevronUp = 2
     static let shapes: [BDShapeArray] = [
         BDShapeAll()
     ]

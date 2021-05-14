@@ -1,0 +1,6 @@
+framework module Pods_bd_22 {
+  umbrella header "Pods-bd-22-umbrella.h"
+
+  export *
+  module * { export * }
+}

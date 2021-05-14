@@ -24,9 +24,9 @@ class BDNode: SKShapeNode {
             print("Adding BDNode \(pos.x) \(pos.y)")
         #endif
         super.init()
-        let w = CGFloat(BDNode.width)
-        let corner = w * 0.3
-        let rect = CGRect.init(x: pos.x, y: pos.y, width: w, height: w)
+        let width = CGFloat(BDNode.width)
+        let corner = width * 0.3
+        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
         path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
         self.lineWidth = 2.5
         self.strokeColor = SKColor.green

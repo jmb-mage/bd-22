@@ -22,9 +22,9 @@ class GameScene: SKScene {
         self.nodesY = Int(size.height / BDNode.height)
         
         let hw = Int(BDNode.width / 2)
-        for y in 0...self.nodesY {
-            for x in 0...self.nodesX {
-                let pos = CGPoint(x:x * hw + Int(self.offset.x), y:y * hw + Int(self.offset.y))
+        for nodesY in 0...self.nodesY {
+            for nodesX in 0...self.nodesX {
+                let pos = CGPoint(x:nodesX * hw + Int(self.offset.x), y:nodesY * hw + Int(self.offset.y))
                 self.addChild(BDNode(pos:pos))
             }
         }
