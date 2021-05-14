@@ -21,6 +21,8 @@ class GameScene: SKScene {
         self.nodesX = Int(size.width / BDNode.width)
         self.nodesY = Int(size.height / BDNode.height)
 
+        BDMood.load()
+
         let halfWidth = Int(BDNode.width / 2)
         for nodesY in 0...self.nodesY {
             for nodesX in 0...self.nodesX {

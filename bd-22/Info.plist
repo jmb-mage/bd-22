@@ -26,5 +26,40 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>moodsRGBA</key>
+	<dict>
+		<key>normal</key>
+		<string>255,255,255,1</string>
+		<key>mystery</key>
+		<string>95,37,159,1</string>
+		<key>thinking</key>
+		<string>155,119,147,1</string>
+		<key>aroused</key>
+		<string>200,16,46,1</string>
+		<key>healthy</key>
+		<string>4,106,56,1</string>
+		<key>concerned</key>
+		<string>213,120,0,1</string>
+		<key>joy</key>
+		<string>255,130,0,1</string>
+		<key>calm</key>
+		<string>173,220,45,1</string>
+		<key>surprised</key>
+		<string>255,205,0,1</string>
+		<key>lively</key>
+		<string>215,163,171,1</string>
+		<key>romantic</key>
+		<string>255,195,60,1</string>
+		<key>mystical</key>
+		<string>184,132,203,1</string>
+		<key>mellow</key>
+		<string>21,71,52,1</string>
+		<key>fear</key>
+		<string>13,13,13,1</string>
+		<key>worried</key>
+		<string>202,231,143,1</string>
+		<key>open</key>
+		<string>113,178,201,1</string>
+	</dict>
 </dict>
 </plist>

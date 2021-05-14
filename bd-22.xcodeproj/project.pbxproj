@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E16441F264EEB6B00B94768 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E16441E264EEB6B00B94768 /* CGFloatExtension.swift */; };
+		1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E164420264EEC8F00B94768 /* BDPlist.swift */; };
 		1E648152264D694F00BC1764 /* BDScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E648151264D694F00BC1764 /* BDScreen.swift */; };
 		1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E648153264D759A00BC1764 /* BDAnimateColor.swift */; };
 		1E648156264E0B4900BC1764 /* BDShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E648155264E0B4900BC1764 /* BDShape.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		1E16441B264E165800B94768 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1E16441E264EEB6B00B94768 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
+		1E164420264EEC8F00B94768 /* BDPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDPlist.swift; sourceTree = "<group>"; };
 		1E648151264D694F00BC1764 /* BDScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDScreen.swift; sourceTree = "<group>"; };
 		1E648153264D759A00BC1764 /* BDAnimateColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDAnimateColor.swift; sourceTree = "<group>"; };
 		1E648155264E0B4900BC1764 /* BDShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDShape.swift; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E16441C264EEB4900B94768 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E16441E264EEB6B00B94768 /* CGFloatExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1ECD2B292646EF650065247B = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 		1ECD2B342646EF660065247B /* bd-22 */ = {
 			isa = PBXGroup;
 			children = (
+				1E16441C264EEB4900B94768 /* Extensions */,
 				1ECD2B4B2646EFD10065247B /* Components */,
 				1ECD2B352646EF660065247B /* AppDelegate.swift */,
 				1ECD2B372646EF660065247B /* GameScene.sks */,
@@ -100,6 +113,7 @@
 				1E648151264D694F00BC1764 /* BDScreen.swift */,
 				1E648153264D759A00BC1764 /* BDAnimateColor.swift */,
 				1E648155264E0B4900BC1764 /* BDShape.swift */,
+				1E164420264EEC8F00B94768 /* BDPlist.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -237,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EBD2EF72647427400F92025 /* BDMood.swift in Sources */,
+				1E16441F264EEB6B00B94768 /* CGFloatExtension.swift in Sources */,
 				1E648152264D694F00BC1764 /* BDScreen.swift in Sources */,
 				1E648156264E0B4900BC1764 /* BDShape.swift in Sources */,
+				1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
 				1ECD2B3C2646EF660065247B /* GameScene.swift in Sources */,
 				1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */,
