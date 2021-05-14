@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class BDColor {
+class BDMood {
     static func getMood(mood : CGPoint) -> SKColor {
         return SKColor(red:   1,
                        green: 1 ,

@@ -13,7 +13,7 @@ class BDNode: SKShapeNode {
     static var width: CGFloat = 48
     static var height: CGFloat = 48
     var mood: CGPoint = CGPoint(x: 0, y: 0)
-    var moodV: CGPoint = CGPoint(x: 0, y: 0)
+    var moodV: Double = 5
     var isMoodAnimating:Bool = false
 
     // Init
@@ -29,7 +29,7 @@ class BDNode: SKShapeNode {
         path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
         self.lineWidth = 2.5
         self.strokeColor = SKColor.green
-        self.fillColor = BDColor.getMood(mood: self.mood)
+        self.fillColor = BDMood.getMoodPoint(mood: self.mood)
         self.position = pos
     }
     
@@ -42,8 +42,8 @@ class BDNode: SKShapeNode {
             self.isMoodAnimating = true
             self.run(SKAction.BDAnimateColor(
                         fromColor: self.fillColor,
-                        toColor: BDColor.getRandomMood(mood: self.mood),
-                        duration: 5),
+                        toColor: BDMood.getMood(mood: Int(arc4random_uniform(16))),
+                        duration: self.moodV),
                      completion: {() -> Void in
                         self.isMoodAnimating = false
                     })
