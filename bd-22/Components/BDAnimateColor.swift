@@ -8,8 +8,7 @@
 import Foundation
 import SpriteKit
 
-func lerp(start : CGFloat, end : CGFloat, fraction : CGFloat) -> CGFloat
-{
+func lerp(start: CGFloat, end: CGFloat, fraction: CGFloat) -> CGFloat {
     return (end-start) * fraction + start
 }
 
@@ -29,9 +28,8 @@ extension SKColor {
 }
 
 extension SKAction {
-    static func BDAnimateColor(fromColor : SKColor, toColor : SKColor, duration : Double = 0.4) -> SKAction
-    {
-        return SKAction.customAction(withDuration: duration, actionBlock: { (node : SKNode!, elapsedTime : CGFloat) -> Void in
+    static func BDAnimateColor(fromColor: SKColor, toColor: SKColor, duration: Double = 0.4) -> SKAction {
+        return SKAction.customAction(withDuration: duration, actionBlock: { (node: SKNode!, elapsedTime: CGFloat) -> Void in
             let fraction = CGFloat(elapsedTime / CGFloat(duration))
             let startColorComponents = fromColor.toComponents()
             let endColorComponents = toColor.toComponents()

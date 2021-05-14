@@ -14,14 +14,14 @@ class BDNode: SKShapeNode {
     static var height: CGFloat = 48
     var mood: CGPoint = CGPoint(x: 0, y: 0)
     var moodV: Double = 5
-    var isMoodAnimating:Bool = false
+    var isMoodAnimating: Bool = false
     var taskId: Int = 0
 
     // Init
-    
+
     init(pos: CGPoint) {
         #if DEBUG
-            print("Adding BDNode \(pos.x) \(pos.y)")
+        print("Adding BDNode \(pos.x) \(pos.y)")
         #endif
         super.init()
         let width = CGFloat(BDNode.width)
@@ -33,13 +33,13 @@ class BDNode: SKShapeNode {
         self.fillColor = BDMood.getMoodPoint(mood: self.mood)
         self.position = pos
     }
-    
+
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public func update() {
-        if(self.isMoodAnimating == false) {
+        if self.isMoodAnimating == false {
             self.isMoodAnimating = true
             self.run(SKAction.BDAnimateColor(
                         fromColor: self.fillColor,
@@ -47,7 +47,7 @@ class BDNode: SKShapeNode {
                         duration: self.moodV),
                      completion: {() -> Void in
                         self.isMoodAnimating = false
-                    })
+                     })
         }
     }
 }

@@ -17,7 +17,7 @@ class BDScreen {
         if let bounds = scene.view?.bounds {
             return bounds
         }
-        
+
         return CGRect(x: 0, y: 0, width: 0, height: 0)
     }
 }

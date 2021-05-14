@@ -9,9 +9,9 @@ import Foundation
 import SpriteKit
 
 class BDMood {
-    
+
     static let moodCount = 16
-    
+
     static let normal = 0
     static let mystery = 1
     static let thinking = 2
@@ -28,8 +28,8 @@ class BDMood {
     static let fear = 13
     static let worried = 14
     static let open = 15
-    
-    static let moods:[SKColor] = [
+
+    static let moods: [SKColor] = [
         // normal
         SKColor(red: 1, green: 1, blue: 1, alpha: 1.0),
         // mystery
@@ -61,27 +61,27 @@ class BDMood {
         // worried
         SKColor(srgbRed: 202.0/255.0, green: 231.0/255.0, blue: 143.0/255.0, alpha: 1.0),
         // open
-        SKColor(srgbRed: 113.0/255.0, green: 178.0/255.0, blue: 201.0/255.0, alpha: 1.0),
+        SKColor(srgbRed: 113.0/255.0, green: 178.0/255.0, blue: 201.0/255.0, alpha: 1.0)
     ]
-    
+
     static func getMood(mood: Int) -> SKColor {
         if mood >= 0 && mood < moodCount {
             return self.moods[mood]
         }
         return self.moods[0]
     }
-    
-    static func getMoodPoint(mood : CGPoint) -> SKColor {
-        return SKColor(red:   1,
+
+    static func getMoodPoint(mood: CGPoint) -> SKColor {
+        return SKColor(red: 1,
                        green: 1 ,
-                       blue:  1 ,
+                       blue: 1 ,
                        alpha: 1.0)
     }
 
-    static func getMoodRandom(mood : CGPoint) -> SKColor {
-        return SKColor(red:   CGFloat(arc4random_uniform(255))/255.0,
+    static func getMoodRandom(mood: CGPoint) -> SKColor {
+        return SKColor(red: CGFloat(arc4random_uniform(255))/255.0,
                        green: CGFloat(arc4random_uniform(255))/255.0 ,
-                       blue:  CGFloat(arc4random_uniform(255))/255.0 ,
+                       blue: CGFloat(arc4random_uniform(255))/255.0 ,
                        alpha: 1.0)
     }
 }

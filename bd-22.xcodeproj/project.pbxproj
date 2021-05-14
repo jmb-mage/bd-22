@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E16441B264E165800B94768 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1E648151264D694F00BC1764 /* BDScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDScreen.swift; sourceTree = "<group>"; };
 		1E648153264D759A00BC1764 /* BDAnimateColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDAnimateColor.swift; sourceTree = "<group>"; };
 		1E648155264E0B4900BC1764 /* BDShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDShape.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 				1ECD2B412646EF670065247B /* Main.storyboard */,
 				1ECD2B442646EF670065247B /* Info.plist */,
 				1ECD2B452646EF670065247B /* bd_22.entitlements */,
+				1E16441B264E165800B94768 /* README.md */,
 			);
 			path = "bd-22";
 			sourceTree = "<group>";
@@ -108,7 +110,6 @@
 				8498FF599F541048287EBF82 /* Pods-bd-22.debug.xcconfig */,
 				A5E2CA533AD70D7920D4AD42 /* Pods-bd-22.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

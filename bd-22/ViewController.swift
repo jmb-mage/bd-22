@@ -12,7 +12,7 @@ import GameplayKit
 class ViewController: NSViewController {
 
     @IBOutlet var skView: SKView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,13 +22,12 @@ class ViewController: NSViewController {
                 view.presentScene(scene)
                 scene.start(size: view.bounds.size)
             }
-            
+
             #if DEBUG
-                view.ignoresSiblingOrder = true
-                view.showsFPS = true
-                view.showsNodeCount = true
+            view.ignoresSiblingOrder = true
+            view.showsFPS = true
+            view.showsNodeCount = true
             #endif
         }
     }
 }
-
