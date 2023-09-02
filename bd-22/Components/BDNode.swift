@@ -16,7 +16,8 @@ class BDNode: SKShapeNode {
     var moodV: Double = 5
     var isMoodAnimating: Bool = false
     var taskId: Int = 0
-
+    var isShapeNode: Bool = true
+    
     // Init
 
     init(pos: CGPoint) {
@@ -32,6 +33,7 @@ class BDNode: SKShapeNode {
         self.strokeColor = SKColor.green
         self.fillColor = BDMood.getMoodPoint(mood: self.mood)
         self.position = pos
+        self.isShapeNode = true
     }
     
     init(pos: CGPoint, color: SKColor) {
@@ -48,13 +50,31 @@ class BDNode: SKShapeNode {
         self.fillColor = color
         self.position = pos
     }
+    
+    init(pos: CGPoint, color: SKColor, isShape: Bool) {
+        #if DEBUG
+        print("Adding BDNode \(pos.x) \(pos.y) \(color)")
+        #endif
+        super.init()
+        let width = CGFloat(BDNode.width)
+        let corner = width * 0.3
+        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
+        if isShape == true {
+            path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
+            self.lineWidth = 2.5
+            self.strokeColor = SKColor.green
+        }
+        self.fillColor = color
+        self.position = pos
+        self.isShapeNode = isShape
+    }
 
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     public func update() {
-        if self.isMoodAnimating == false {
+        if self.isMoodAnimating == false && self.isShapeNode == true {
             self.isMoodAnimating = true
             self.run(SKAction.BDAnimateColor(
                         fromColor: self.fillColor,
