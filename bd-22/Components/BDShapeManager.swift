@@ -13,11 +13,8 @@ class BDShapeManager {
     init() {
     }
 
-    func get(shapeId: Int) -> [[Int]] {
-        switch shapeId {
-        default:
-            return shapes[0].nodes
-        }
+    func get(id: Int) -> [[CGFloat]] {
+        return shapes[id].nodes
     }
 
     func add(shapeArray: BDShape) {

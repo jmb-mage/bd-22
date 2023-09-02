@@ -8,11 +8,11 @@
 import Foundation
 
 class BDShape : Codable {    
-    var nodes : [[Int]]
+    var nodes : [[CGFloat]]
     var name : String
     
-    init(intArray: [[Int]], name: String) {
-        self.nodes = intArray
+    init(array: [[CGFloat]], name: String) {
+        self.nodes = array
         self.name = name
     }
 }

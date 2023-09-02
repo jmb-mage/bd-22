@@ -33,6 +33,21 @@ class BDNode: SKShapeNode {
         self.fillColor = BDMood.getMoodPoint(mood: self.mood)
         self.position = pos
     }
+    
+    init(pos: CGPoint, color: SKColor) {
+        #if DEBUG
+        print("Adding BDNode \(pos.x) \(pos.y) \(color)")
+        #endif
+        super.init()
+        let width = CGFloat(BDNode.width)
+        let corner = width * 0.3
+        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
+        path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
+        self.lineWidth = 2.5
+        self.strokeColor = SKColor.green
+        self.fillColor = color
+        self.position = pos
+    }
 
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -24,12 +24,15 @@ class GameScene: SKScene {
 
         BDMood.load()
         shapeManager.load(jsonFile: "ShapeAll")
+        shapeManager.load(jsonFile: "ShapeDonut")
+        let shape = shapeManager.get(id:1)
 
         let halfWidth = Int(BDNode.width / 2)
         for nodesY in 0...self.nodesY {
             for nodesX in 0...self.nodesX {
+                let color = SKColor(red: 1.0, green: 1.0, blue: 1.0, alpha: shape[nodesY][nodesX])
                 let pos = CGPoint(x: nodesX * halfWidth + Int(self.offset.x), y: nodesY * halfWidth + Int(self.offset.y))
-                self.addChild(BDNode(pos: pos))
+                self.addChild(BDNode(pos: pos, color: color))
             }
         }
     }
