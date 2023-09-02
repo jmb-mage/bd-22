@@ -21,6 +21,8 @@
 		1ECD2B402646EF670065247B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD2B3F2646EF670065247B /* Assets.xcassets */; };
 		1ECD2B432646EF670065247B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD2B412646EF670065247B /* Main.storyboard */; };
 		1ECD2B4D2646F0930065247B /* BDNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD2B4C2646F0930065247B /* BDNode.swift */; };
+		8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */; };
+		8796E9E42AA3CF9000FFE1CB /* ShapeAll.json in Resources */ = {isa = PBXBuildFile; fileRef = 8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */; };
 		C8F7C4A61D116867DA946381 /* Pods_bd_22.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5332FEF96D87BD4F436E5 /* Pods_bd_22.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		1ECD2B452646EF670065247B /* bd_22.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bd_22.entitlements; sourceTree = "<group>"; };
 		1ECD2B4C2646F0930065247B /* BDNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDNode.swift; sourceTree = "<group>"; };
 		8498FF599F541048287EBF82 /* Pods-bd-22.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bd-22.debug.xcconfig"; path = "Target Support Files/Pods-bd-22/Pods-bd-22.debug.xcconfig"; sourceTree = "<group>"; };
+		8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDShapeManager.swift; sourceTree = "<group>"; };
+		8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ShapeAll.json; path = "bd-22/JSON/ShapeAll.json"; sourceTree = SOURCE_ROOT; };
 		A5E2CA533AD70D7920D4AD42 /* Pods-bd-22.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bd-22.release.xcconfig"; path = "Target Support Files/Pods-bd-22/Pods-bd-22.release.xcconfig"; sourceTree = "<group>"; };
 		CED5332FEF96D87BD4F436E5 /* Pods_bd_22.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bd_22.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +93,7 @@
 		1ECD2B342646EF660065247B /* bd-22 */ = {
 			isa = PBXGroup;
 			children = (
+				8796E9E22AA3CF5A00FFE1CB /* JSON */,
 				1E16441C264EEB4900B94768 /* Extensions */,
 				1ECD2B4B2646EFD10065247B /* Components */,
 				1ECD2B352646EF660065247B /* AppDelegate.swift */,
@@ -108,6 +113,7 @@
 		1ECD2B4B2646EFD10065247B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */,
 				1ECD2B4C2646F0930065247B /* BDNode.swift */,
 				1EBD2EF62647427400F92025 /* BDMood.swift */,
 				1E648151264D694F00BC1764 /* BDScreen.swift */,
@@ -125,6 +131,14 @@
 				A5E2CA533AD70D7920D4AD42 /* Pods-bd-22.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8796E9E22AA3CF5A00FFE1CB /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		F9AEFAD0A509B9EF9D7BCF34 /* Frameworks */ = {
@@ -196,6 +210,7 @@
 			files = (
 				1ECD2B382646EF660065247B /* GameScene.sks in Resources */,
 				1ECD2B402646EF670065247B /* Assets.xcassets in Resources */,
+				8796E9E42AA3CF9000FFE1CB /* ShapeAll.json in Resources */,
 				1ECD2B3A2646EF660065247B /* Actions.sks in Resources */,
 				1ECD2B432646EF670065247B /* Main.storyboard in Resources */,
 			);
@@ -219,7 +234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    echo \"Running swiftlint\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		549B3F8390BEF66F153BE418 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -257,6 +272,7 @@
 				1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
 				1ECD2B3C2646EF660065247B /* GameScene.swift in Sources */,
+				8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */,
 				1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */,
 				1ECD2B362646EF660065247B /* AppDelegate.swift in Sources */,
 				1ECD2B4D2646F0930065247B /* BDNode.swift in Sources */,

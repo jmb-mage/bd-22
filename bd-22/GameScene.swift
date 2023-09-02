@@ -14,6 +14,7 @@ class GameScene: SKScene {
     private var offset: CGPoint = CGPoint(x: 0, y: 0)
     private var nodesX: Int = 0
     private var nodesY: Int = 0
+    private var shapeManager: BDShapeManager = BDShapeManager()
 
     func start(size: CGSize) {
         self.screenSize = size
@@ -22,6 +23,7 @@ class GameScene: SKScene {
         self.nodesY = Int(size.height / BDNode.height)
 
         BDMood.load()
+        shapeManager.load(jsonFile: "ShapeAll")
 
         let halfWidth = Int(BDNode.width / 2)
         for nodesY in 0...self.nodesY {
