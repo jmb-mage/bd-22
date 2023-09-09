@@ -22,6 +22,7 @@
 		1ECD2B432646EF670065247B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD2B412646EF670065247B /* Main.storyboard */; };
 		1ECD2B4D2646F0930065247B /* BDNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD2B4C2646F0930065247B /* BDNode.swift */; };
 		872955192AA3DFC0005954FA /* ShapeDonut.json in Resources */ = {isa = PBXBuildFile; fileRef = 872955182AA3DFC0005954FA /* ShapeDonut.json */; };
+		8729551B2AA40012005954FA /* BDColorBlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729551A2AA40012005954FA /* BDColorBlend.swift */; };
 		8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */; };
 		8796E9E42AA3CF9000FFE1CB /* ShapeAll.json in Resources */ = {isa = PBXBuildFile; fileRef = 8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */; };
 		C8F7C4A61D116867DA946381 /* Pods_bd_22.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5332FEF96D87BD4F436E5 /* Pods_bd_22.framework */; };
@@ -48,6 +49,7 @@
 		1ECD2B4C2646F0930065247B /* BDNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDNode.swift; sourceTree = "<group>"; };
 		8498FF599F541048287EBF82 /* Pods-bd-22.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bd-22.debug.xcconfig"; path = "Target Support Files/Pods-bd-22/Pods-bd-22.debug.xcconfig"; sourceTree = "<group>"; };
 		872955182AA3DFC0005954FA /* ShapeDonut.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShapeDonut.json; sourceTree = "<group>"; };
+		8729551A2AA40012005954FA /* BDColorBlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDColorBlend.swift; sourceTree = "<group>"; };
 		8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDShapeManager.swift; sourceTree = "<group>"; };
 		8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ShapeAll.json; path = "bd-22/JSON/ShapeAll.json"; sourceTree = SOURCE_ROOT; };
 		A5E2CA533AD70D7920D4AD42 /* Pods-bd-22.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bd-22.release.xcconfig"; path = "Target Support Files/Pods-bd-22/Pods-bd-22.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				1E648153264D759A00BC1764 /* BDAnimateColor.swift */,
 				1E648155264E0B4900BC1764 /* BDShape.swift */,
 				1E164420264EEC8F00B94768 /* BDPlist.swift */,
+				8729551A2AA40012005954FA /* BDColorBlend.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				1EBD2EF72647427400F92025 /* BDMood.swift in Sources */,
 				1E16441F264EEB6B00B94768 /* CGFloatExtension.swift in Sources */,
 				1E648152264D694F00BC1764 /* BDScreen.swift in Sources */,
+				8729551B2AA40012005954FA /* BDColorBlend.swift in Sources */,
 				1E648156264E0B4900BC1764 /* BDShape.swift in Sources */,
 				1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
