@@ -12,6 +12,7 @@ import GameplayKit
 class BDNode: SKShapeNode {
     static var width: CGFloat = 48
     static var height: CGFloat = 48
+    static var zPos: CGFloat = 32
     var mood: CGPoint = CGPoint(x: 0, y: 0)
     var moodV: Double = 5
     var isMoodAnimating: Bool = false
@@ -51,6 +52,25 @@ class BDNode: SKShapeNode {
         self.position = pos
     }
     
+    init(pos: CGPoint, region: Int, node: Int) {
+        super.init()
+        self.zPosition = BDNode.zPos
+        let blueRegions = [2,4,5,6,8]
+        let width = CGFloat(BDNode.width)
+        let corner = width * 0.3
+        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
+        path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
+
+        self.lineWidth = 2.5
+        if(blueRegions.contains(region)) {
+            self.strokeColor = SKColor.blue
+        } else {
+            self.strokeColor = SKColor.green
+        }
+        self.fillColor = Colordoku.Colors[node]
+       // self.position = pos
+    }
+    
     init(pos: CGPoint, color: SKColor, isShape: Bool) {
         #if DEBUG
         print("Adding BDNode \(pos.x) \(pos.y) \(color)")
@@ -58,7 +78,7 @@ class BDNode: SKShapeNode {
         super.init()
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3
-        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
+        let rect = CGRect.init(x: -width, y: -width, width: width, height: width)
         if isShape == true {
             path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
             self.lineWidth = 2.5
@@ -74,6 +94,10 @@ class BDNode: SKShapeNode {
     }
 
     public func update() {
+
+    }
+    
+    public func randomColor() {
         if self.isMoodAnimating == false && self.isShapeNode == true {
             self.isMoodAnimating = true
             self.run(SKAction.BDAnimateColor(

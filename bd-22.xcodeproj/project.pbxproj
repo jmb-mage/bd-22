@@ -25,6 +25,11 @@
 		8729551B2AA40012005954FA /* BDColorBlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729551A2AA40012005954FA /* BDColorBlend.swift */; };
 		8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */; };
 		8796E9E42AA3CF9000FFE1CB /* ShapeAll.json in Resources */ = {isa = PBXBuildFile; fileRef = 8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */; };
+		87E4E0B72AAD2E4E00A9E071 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */; };
+		87E4E0B92AAD2F3800A9E071 /* Sudoku.json in Resources */ = {isa = PBXBuildFile; fileRef = 87E4E0B82AAD2F3800A9E071 /* Sudoku.json */; };
+		87E4E0BB2AAD354500A9E071 /* Colordoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0BA2AAD354500A9E071 /* Colordoku.swift */; };
+		87E4E0BF2AAD416000A9E071 /* BDText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0BE2AAD416000A9E071 /* BDText.swift */; };
+		87E4E0C12AAD468C00A9E071 /* BDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0C02AAD468C00A9E071 /* BDCell.swift */; };
 		C8F7C4A61D116867DA946381 /* Pods_bd_22.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5332FEF96D87BD4F436E5 /* Pods_bd_22.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +56,12 @@
 		872955182AA3DFC0005954FA /* ShapeDonut.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShapeDonut.json; sourceTree = "<group>"; };
 		8729551A2AA40012005954FA /* BDColorBlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDColorBlend.swift; sourceTree = "<group>"; };
 		8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDShapeManager.swift; sourceTree = "<group>"; };
-		8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ShapeAll.json; path = "bd-22/JSON/ShapeAll.json"; sourceTree = SOURCE_ROOT; };
+		8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShapeAll.json; sourceTree = "<group>"; };
+		87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
+		87E4E0B82AAD2F3800A9E071 /* Sudoku.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sudoku.json; sourceTree = "<group>"; };
+		87E4E0BA2AAD354500A9E071 /* Colordoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colordoku.swift; sourceTree = "<group>"; };
+		87E4E0BE2AAD416000A9E071 /* BDText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDText.swift; sourceTree = "<group>"; };
+		87E4E0C02AAD468C00A9E071 /* BDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDCell.swift; sourceTree = "<group>"; };
 		A5E2CA533AD70D7920D4AD42 /* Pods-bd-22.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bd-22.release.xcconfig"; path = "Target Support Files/Pods-bd-22/Pods-bd-22.release.xcconfig"; sourceTree = "<group>"; };
 		CED5332FEF96D87BD4F436E5 /* Pods_bd_22.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bd_22.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +120,8 @@
 				1ECD2B442646EF670065247B /* Info.plist */,
 				1ECD2B452646EF670065247B /* bd_22.entitlements */,
 				1E16441B264E165800B94768 /* README.md */,
+				87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */,
+				87E4E0BA2AAD354500A9E071 /* Colordoku.swift */,
 			);
 			path = "bd-22";
 			sourceTree = "<group>";
@@ -125,6 +137,8 @@
 				1E648155264E0B4900BC1764 /* BDShape.swift */,
 				1E164420264EEC8F00B94768 /* BDPlist.swift */,
 				8729551A2AA40012005954FA /* BDColorBlend.swift */,
+				87E4E0BE2AAD416000A9E071 /* BDText.swift */,
+				87E4E0C02AAD468C00A9E071 /* BDCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -143,6 +157,7 @@
 			children = (
 				872955182AA3DFC0005954FA /* ShapeDonut.json */,
 				8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */,
+				87E4E0B82AAD2F3800A9E071 /* Sudoku.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 			files = (
 				872955192AA3DFC0005954FA /* ShapeDonut.json in Resources */,
 				1ECD2B382646EF660065247B /* GameScene.sks in Resources */,
+				87E4E0B92AAD2F3800A9E071 /* Sudoku.json in Resources */,
 				1ECD2B402646EF670065247B /* Assets.xcassets in Resources */,
 				8796E9E42AA3CF9000FFE1CB /* ShapeAll.json in Resources */,
 				1ECD2B3A2646EF660065247B /* Actions.sks in Resources */,
@@ -274,14 +290,18 @@
 			files = (
 				1EBD2EF72647427400F92025 /* BDMood.swift in Sources */,
 				1E16441F264EEB6B00B94768 /* CGFloatExtension.swift in Sources */,
+				87E4E0B72AAD2E4E00A9E071 /* SceneController.swift in Sources */,
 				1E648152264D694F00BC1764 /* BDScreen.swift in Sources */,
+				87E4E0BF2AAD416000A9E071 /* BDText.swift in Sources */,
 				8729551B2AA40012005954FA /* BDColorBlend.swift in Sources */,
 				1E648156264E0B4900BC1764 /* BDShape.swift in Sources */,
 				1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
+				87E4E0BB2AAD354500A9E071 /* Colordoku.swift in Sources */,
 				1ECD2B3C2646EF660065247B /* GameScene.swift in Sources */,
 				8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */,
 				1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */,
+				87E4E0C12AAD468C00A9E071 /* BDCell.swift in Sources */,
 				1ECD2B362646EF660065247B /* AppDelegate.swift in Sources */,
 				1ECD2B4D2646F0930065247B /* BDNode.swift in Sources */,
 			);
