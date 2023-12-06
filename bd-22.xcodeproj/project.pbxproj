@@ -25,6 +25,10 @@
 		8729551B2AA40012005954FA /* BDColorBlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729551A2AA40012005954FA /* BDColorBlend.swift */; };
 		8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */; };
 		8796E9E42AA3CF9000FFE1CB /* ShapeAll.json in Resources */ = {isa = PBXBuildFile; fileRef = 8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */; };
+		87B3A3582B21152600CA036E /* ColordokuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A3572B21152500CA036E /* ColordokuScene.swift */; };
+		87B3A35A2B2115AE00CA036E /* SceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A3592B2115AE00CA036E /* SceneProtocol.swift */; };
+		87B3A35C2B21187600CA036E /* JsonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A35B2B21187600CA036E /* JsonScene.swift */; };
+		87B3A35E2B2118C700CA036E /* SceneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A35D2B2118C700CA036E /* SceneProvider.swift */; };
 		87E4E0B72AAD2E4E00A9E071 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */; };
 		87E4E0B92AAD2F3800A9E071 /* Sudoku.json in Resources */ = {isa = PBXBuildFile; fileRef = 87E4E0B82AAD2F3800A9E071 /* Sudoku.json */; };
 		87E4E0BB2AAD354500A9E071 /* Colordoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0BA2AAD354500A9E071 /* Colordoku.swift */; };
@@ -57,6 +61,10 @@
 		8729551A2AA40012005954FA /* BDColorBlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDColorBlend.swift; sourceTree = "<group>"; };
 		8796E9E02AA39DE400FFE1CB /* BDShapeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDShapeManager.swift; sourceTree = "<group>"; };
 		8796E9E32AA3CF9000FFE1CB /* ShapeAll.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShapeAll.json; sourceTree = "<group>"; };
+		87B3A3572B21152500CA036E /* ColordokuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColordokuScene.swift; sourceTree = "<group>"; };
+		87B3A3592B2115AE00CA036E /* SceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProtocol.swift; sourceTree = "<group>"; };
+		87B3A35B2B21187600CA036E /* JsonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonScene.swift; sourceTree = "<group>"; };
+		87B3A35D2B2118C700CA036E /* SceneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProvider.swift; sourceTree = "<group>"; };
 		87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		87E4E0B82AAD2F3800A9E071 /* Sudoku.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sudoku.json; sourceTree = "<group>"; };
 		87E4E0BA2AAD354500A9E071 /* Colordoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colordoku.swift; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 		1ECD2B342646EF660065247B /* bd-22 */ = {
 			isa = PBXGroup;
 			children = (
+				87B3A3562B2114A100CA036E /* Scenes */,
 				8796E9E22AA3CF5A00FFE1CB /* JSON */,
 				1E16441C264EEB4900B94768 /* Extensions */,
 				1ECD2B4B2646EFD10065247B /* Components */,
@@ -160,6 +169,17 @@
 				87E4E0B82AAD2F3800A9E071 /* Sudoku.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		87B3A3562B2114A100CA036E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				87B3A3572B21152500CA036E /* ColordokuScene.swift */,
+				87B3A3592B2115AE00CA036E /* SceneProtocol.swift */,
+				87B3A35B2B21187600CA036E /* JsonScene.swift */,
+				87B3A35D2B2118C700CA036E /* SceneProvider.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		F9AEFAD0A509B9EF9D7BCF34 /* Frameworks */ = {
@@ -292,15 +312,19 @@
 				1E16441F264EEB6B00B94768 /* CGFloatExtension.swift in Sources */,
 				87E4E0B72AAD2E4E00A9E071 /* SceneController.swift in Sources */,
 				1E648152264D694F00BC1764 /* BDScreen.swift in Sources */,
+				87B3A35C2B21187600CA036E /* JsonScene.swift in Sources */,
 				87E4E0BF2AAD416000A9E071 /* BDText.swift in Sources */,
 				8729551B2AA40012005954FA /* BDColorBlend.swift in Sources */,
 				1E648156264E0B4900BC1764 /* BDShape.swift in Sources */,
 				1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
 				87E4E0BB2AAD354500A9E071 /* Colordoku.swift in Sources */,
+				87B3A35E2B2118C700CA036E /* SceneProvider.swift in Sources */,
 				1ECD2B3C2646EF660065247B /* GameScene.swift in Sources */,
 				8796E9E12AA39DE400FFE1CB /* BDShapeManager.swift in Sources */,
 				1E648154264D759A00BC1764 /* BDAnimateColor.swift in Sources */,
+				87B3A3582B21152600CA036E /* ColordokuScene.swift in Sources */,
+				87B3A35A2B2115AE00CA036E /* SceneProtocol.swift in Sources */,
 				87E4E0C12AAD468C00A9E071 /* BDCell.swift in Sources */,
 				1ECD2B362646EF660065247B /* AppDelegate.swift in Sources */,
 				1ECD2B4D2646F0930065247B /* BDNode.swift in Sources */,
