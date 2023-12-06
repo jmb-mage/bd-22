@@ -18,7 +18,7 @@ class BDNode: SKShapeNode {
     var isMoodAnimating: Bool = false
     var taskId: Int = 0
     var isShapeNode: Bool = true
-    
+    var scalar: CGFloat = 8.0
     // Init
 
     init(pos: CGPoint) {
@@ -28,7 +28,7 @@ class BDNode: SKShapeNode {
         super.init()
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3
-        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
+        let rect = CGRect.init(x: pos.x + scalar, y: pos.y + scalar, width: width - scalar, height: width - scalar)
         path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
         self.lineWidth = 2.5
         self.strokeColor = SKColor.green

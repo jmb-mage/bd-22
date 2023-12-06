@@ -29,6 +29,7 @@
 		87B3A35A2B2115AE00CA036E /* SceneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A3592B2115AE00CA036E /* SceneProtocol.swift */; };
 		87B3A35C2B21187600CA036E /* JsonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A35B2B21187600CA036E /* JsonScene.swift */; };
 		87B3A35E2B2118C700CA036E /* SceneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A35D2B2118C700CA036E /* SceneProvider.swift */; };
+		87B3A3602B211EDE00CA036E /* BDLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3A35F2B211EDE00CA036E /* BDLine.swift */; };
 		87E4E0B72AAD2E4E00A9E071 /* SceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */; };
 		87E4E0B92AAD2F3800A9E071 /* Sudoku.json in Resources */ = {isa = PBXBuildFile; fileRef = 87E4E0B82AAD2F3800A9E071 /* Sudoku.json */; };
 		87E4E0BB2AAD354500A9E071 /* Colordoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4E0BA2AAD354500A9E071 /* Colordoku.swift */; };
@@ -65,6 +66,7 @@
 		87B3A3592B2115AE00CA036E /* SceneProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProtocol.swift; sourceTree = "<group>"; };
 		87B3A35B2B21187600CA036E /* JsonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonScene.swift; sourceTree = "<group>"; };
 		87B3A35D2B2118C700CA036E /* SceneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneProvider.swift; sourceTree = "<group>"; };
+		87B3A35F2B211EDE00CA036E /* BDLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDLine.swift; sourceTree = "<group>"; };
 		87E4E0B62AAD2E4E00A9E071 /* SceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneController.swift; sourceTree = "<group>"; };
 		87E4E0B82AAD2F3800A9E071 /* Sudoku.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sudoku.json; sourceTree = "<group>"; };
 		87E4E0BA2AAD354500A9E071 /* Colordoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colordoku.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				8729551A2AA40012005954FA /* BDColorBlend.swift */,
 				87E4E0BE2AAD416000A9E071 /* BDText.swift */,
 				87E4E0C02AAD468C00A9E071 /* BDCell.swift */,
+				87B3A35F2B211EDE00CA036E /* BDLine.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				1E648156264E0B4900BC1764 /* BDShape.swift in Sources */,
 				1E164421264EEC8F00B94768 /* BDPlist.swift in Sources */,
 				1ECD2B3E2646EF660065247B /* ViewController.swift in Sources */,
+				87B3A3602B211EDE00CA036E /* BDLine.swift in Sources */,
 				87E4E0BB2AAD354500A9E071 /* Colordoku.swift in Sources */,
 				87B3A35E2B2118C700CA036E /* SceneProvider.swift in Sources */,
 				1ECD2B3C2646EF660065247B /* GameScene.swift in Sources */,
