@@ -10,6 +10,6 @@ import SpriteKit
 import GameplayKit
 
 protocol SceneProtocol {
-    func Load(scene: SKScene, size:CGSize)
+    func Load(scene: SKScene)
     func Update(nodes:[SKNode])
 }

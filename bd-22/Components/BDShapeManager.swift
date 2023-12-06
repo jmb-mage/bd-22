@@ -36,4 +36,8 @@ class BDShapeManager {
         }
 
     }
+    
+    func nodeSize() -> BDIntSize {
+        return BDIntSize(x:shapes[0].nodes.count, y:shapes[0].nodes[0].count)
+    }
 }

@@ -14,8 +14,9 @@ class GameScene: SKScene {
     private var currentScene: SceneProtocol? = nil;
     
     func start(size: CGSize) {
+        Globals.ScreenSize = size;
         currentScene = sceneProvider.next();
-        currentScene!.Load(scene: self, size: size);
+        currentScene!.Load(scene: self);
     }
 
     func touchDown(atPoint pos: CGPoint) {
@@ -43,7 +44,9 @@ class GameScene: SKScene {
     }
 
     override func mouseDown(with event: NSEvent) {
-        self.touchDown(atPoint: event.location(in: self))
+        let pos:CGPoint = event.location(in: self)
+        BDLog.Log(msg:"Mouse down \(pos.x) \(pos.y)")
+        self.touchDown(atPoint: pos)
     }
 
     override func mouseDragged(with event: NSEvent) {

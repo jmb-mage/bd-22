@@ -18,17 +18,14 @@ class BDNode: SKShapeNode {
     var isMoodAnimating: Bool = false
     var taskId: Int = 0
     var isShapeNode: Bool = true
-    var scalar: CGFloat = 8.0
     // Init
 
     init(pos: CGPoint) {
-        #if DEBUG
-        print("Adding BDNode \(pos.x) \(pos.y)")
-        #endif
+        BDLog.Log(msg:"Adding BDNode \(pos.x) \(pos.y)")
         super.init()
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3
-        let rect = CGRect.init(x: pos.x + scalar, y: pos.y + scalar, width: width - scalar, height: width - scalar)
+        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
         path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
         self.lineWidth = 2.5
         self.strokeColor = SKColor.green
@@ -38,9 +35,7 @@ class BDNode: SKShapeNode {
     }
     
     init(pos: CGPoint, color: SKColor) {
-        #if DEBUG
-        print("Adding BDNode \(pos.x) \(pos.y) \(color)")
-        #endif
+        BDLog.Log(msg:"Adding BDNode \(pos.x) \(pos.y) \(color)")
         super.init()
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3
@@ -52,13 +47,13 @@ class BDNode: SKShapeNode {
         self.position = pos
     }
     
-    init(pos: CGPoint, region: Int, node: Int) {
+    init(pos: CGPoint, region: Int, node: Int, scalar: CGFloat) {
         super.init()
         self.zPosition = BDNode.zPos
         let blueRegions = [2,4,5,6,8]
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3
-        let rect = CGRect.init(x: pos.x, y: pos.y, width: width, height: width)
+        let rect = CGRect.init(x: pos.x + scalar, y: pos.y + scalar, width: width - scalar, height: width - scalar)
         path = CGPath.init(roundedRect: rect, cornerWidth: corner, cornerHeight: corner, transform: nil)
 
         self.lineWidth = 2.5
@@ -67,14 +62,12 @@ class BDNode: SKShapeNode {
         } else {
             self.strokeColor = SKColor.green
         }
-        self.fillColor = Colordoku.Colors[node]
+        self.fillColor = Globals.Colors[node]
        // self.position = pos
     }
     
     init(pos: CGPoint, color: SKColor, isShape: Bool) {
-        #if DEBUG
-        print("Adding BDNode \(pos.x) \(pos.y) \(color)")
-        #endif
+        BDLog.Log(msg:"Adding BDNode \(pos.x) \(pos.y) \(color)")
         super.init()
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3

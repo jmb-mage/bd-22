@@ -11,15 +11,15 @@ import SpriteKit
 import GameplayKit
 
 class JsonScene : SceneProtocol {
-    private var screenSize: CGSize = CGSize(width: 0, height: 0)
+    private var size: CGSize = CGSize(width: 0, height: 0)
     private var offset: CGPoint = CGPoint(x: 0, y: 0)
     private var nodesX: Int = 0
     private var nodesY: Int = 0
     private var shapeManager: BDShapeManager = BDShapeManager()
     var cells:[[BDCell]] = []
     
-    func Load(scene: SKScene, size:CGSize) {
-        self.screenSize = size
+    func Load(scene: SKScene) {
+        self.size = Globals.ScreenSize
         self.offset = CGPoint(x: -size.width / 4, y: -size.height / 4)
         self.nodesX = Int(size.width / BDNode.width)
         self.nodesY = Int(size.height / BDNode.height)

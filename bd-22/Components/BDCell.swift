@@ -20,7 +20,7 @@ public class BDCell {
         self.region = Int(id)
         self.id = id
         self.node = Int(id * 10.0) - Int(self.region * 10)
-        self.bdNode = BDNode(pos: pos, region: self.region, node: self.node)
+        self.bdNode = BDNode(pos: pos, region: self.region, node: self.node, scalar: 8.0)
         self.bdText = BDText(pos: pos, id: id)
         scene.addChild(bdNode)
         scene.addChild(bdText)
