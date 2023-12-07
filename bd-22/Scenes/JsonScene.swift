@@ -48,4 +48,8 @@ class JsonScene : SceneProtocol {
             }
         }
     }
+    
+    func MouseDown(pos:CGPoint, touchedNodes: [SKNode]) {
+    
+    }
 }

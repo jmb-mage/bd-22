@@ -15,7 +15,8 @@ class ColordokuScene : SceneProtocol {
     private var nodeSize: BDIntSize = BDIntSize()
     private var shapeManager: BDShapeManager = BDShapeManager()
     private var cells:[[BDCell]] = []
-    private var board:[BDLine] = []
+    private var boardLines:[SKShapeNode] = []
+    private var boardCells:[[BDNode]] = []
     private var scene:SKScene? = nil;
 
     func Load(scene: SKScene) {
@@ -26,7 +27,7 @@ class ColordokuScene : SceneProtocol {
         nodeSize = shapeManager.nodeSize()
         boardSize = CGSize(width: nodeSize.x * nodeWidth, height: nodeSize.y * nodeWidth)
         Globals.Transform = CGSize(width: -boardSize.width / 2, height: -boardSize.height / 2)
-        buildBoard()
+        drawBoard()
         placeAllPieces()
     }
     
@@ -38,32 +39,58 @@ class ColordokuScene : SceneProtocol {
         }
     }
     
-    private func buildBoard() {
+    func MouseDown(pos:CGPoint, touchedNodes: [SKNode]) {
+        let position = BDPoint(x: pos.x, y: pos.y)
+        BDLog.Log(msg:"Mouse down \(position.x) \(position.y) touched node count: \(touchedNodes.count)")
+    }
+    
+    private func drawBoard() {
+        let zPos:CGFloat = Globals.zPos.Board
+        
+        for nodesY in 0...nodeSize.y-1 {
+            boardCells.append([])
+            for nodesX in 0...nodeSize.x-1 {
+                let pos = BDPoint(x: nodesX * nodeWidth, y: nodesY * nodeWidth)
+                let node = BDNode(pos: pos.ToView(), scalar: 0, zPos:zPos)
+                boardCells[nodesY].append(node)
+                scene!.addChild(node)
+            }
+        }
+    }
+    
+    private func drawBoardLines() {
+        let zPos = Globals.zPos.BoardDecorations
+        
         for node in 0...nodeSize.y {
             let pos:Int = node * nodeWidth
             let start = BDPoint(x:pos, y: 0)
             let end = BDPoint(x:pos, y: Int(boardSize.height))
-            let line = BDLine(start: start.ToView(), end: end.ToView())
-            scene!.addChild(line.child())
+            let line = BDLine(start: start.ToView(), end: end.ToView(), zPos:zPos, key:"Y")
+            let node = line.child()
+            boardLines.append(node)
+            scene!.addChild(node)
         }
         for node in 0...nodeSize.x {
             let pos:Int = node * nodeWidth
             let start = BDPoint(x:0, y: pos)
             let end = BDPoint(x: Int(boardSize.width), y: pos)
-            let line = BDLine(start: start.ToView(), end: end.ToView())
-            scene!.addChild(line.child())
+            let line = BDLine(start: start.ToView(), end: end.ToView(), zPos:zPos, key: "X")
+            let node = line.child()
+            boardLines.append(node)
+            scene!.addChild(node)
         }
     }
     
     private func placeAllPieces() {
         let shape = shapeManager.get(id:0)
+        let zPos = Globals.zPos.Pieces
         
         for nodesY in 0...nodeSize.y-1 {
             cells.append([])
             for nodesX in 0...nodeSize.x-1 {
                 let shapeValue = shape[nodesY][nodesX]
                 let pos = BDPoint(x: nodesX * nodeWidth, y: nodesY * nodeWidth)
-                cells[nodesY].append(BDCell(scene: self.scene!, pos: pos.ToView(), id: shapeValue))
+                cells[nodesY].append(BDCell(scene: self.scene!, pos: pos.ToView(), id: shapeValue, scalar: 4.0, zPos:zPos))
             }
         }
     }

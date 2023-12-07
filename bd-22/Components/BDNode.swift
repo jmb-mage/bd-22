@@ -12,12 +12,26 @@ import GameplayKit
 class BDNode: SKShapeNode {
     static var width: CGFloat = 48
     static var height: CGFloat = 48
-    static var zPos: CGFloat = 32
     var mood: CGPoint = CGPoint(x: 0, y: 0)
     var moodV: Double = 5
     var isMoodAnimating: Bool = false
     var taskId: Int = 0
     var isShapeNode: Bool = true
+    
+    // Overrides
+    override var isUserInteractionEnabled: Bool {
+        get { return true }
+        set { }
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        // hello
+    }
+    
+    override func touchesBegan(with event: NSEvent) {
+        // hello
+    }
+    
     // Init
 
     init(pos: CGPoint) {
@@ -47,9 +61,9 @@ class BDNode: SKShapeNode {
         self.position = pos
     }
     
-    init(pos: CGPoint, region: Int, node: Int, scalar: CGFloat) {
+    init(pos: CGPoint, region: Int, node: Int, scalar: CGFloat, zPos:CGFloat) {
         super.init()
-        self.zPosition = BDNode.zPos
+        self.zPosition = zPos
         let blueRegions = [2,4,5,6,8]
         let width = CGFloat(BDNode.width)
         let corner = width * 0.3
@@ -63,7 +77,17 @@ class BDNode: SKShapeNode {
             self.strokeColor = SKColor.green
         }
         self.fillColor = Globals.Colors[node]
-       // self.position = pos
+    }
+    
+    init(pos: CGPoint, scalar: CGFloat, zPos:CGFloat) {
+        super.init()
+        self.zPosition = zPos
+        let width = CGFloat(BDNode.width)
+        let rect = CGRect.init(x: pos.x + scalar, y: pos.y + scalar, width: width - scalar, height: width - scalar)
+        path = CGPath.init(rect: rect, transform: nil)
+        self.lineWidth = 1.5
+        self.strokeColor = SKColor.black
+        self.fillColor = SKColor.clear
     }
     
     init(pos: CGPoint, color: SKColor, isShape: Bool) {

@@ -12,4 +12,5 @@ import GameplayKit
 protocol SceneProtocol {
     func Load(scene: SKScene)
     func Update(nodes:[SKNode])
+    func MouseDown(pos:CGPoint, touchedNodes: [SKNode])
 }

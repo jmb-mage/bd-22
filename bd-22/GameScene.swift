@@ -18,7 +18,23 @@ class GameScene: SKScene {
         currentScene = sceneProvider.next();
         currentScene!.Load(scene: self);
     }
-
+    
+    override func update(_ currentTime: TimeInterval) {
+        currentScene!.Update(nodes: self.children)
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        let location = event.location(in: self)
+        let touchedNodes = nodes(at: location)
+        currentScene!.MouseDown(pos: location, touchedNodes: touchedNodes)
+    }
+    
+    override var isUserInteractionEnabled: Bool {
+        get { return true }
+        set { }
+    }
+    
+    /*
     func touchDown(atPoint pos: CGPoint) {
         //        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
         //            n.position = pos
@@ -43,12 +59,6 @@ class GameScene: SKScene {
         //        }
     }
 
-    override func mouseDown(with event: NSEvent) {
-        let pos:CGPoint = event.location(in: self)
-        BDLog.Log(msg:"Mouse down \(pos.x) \(pos.y)")
-        self.touchDown(atPoint: pos)
-    }
-
     override func mouseDragged(with event: NSEvent) {
         self.touchMoved(toPoint: event.location(in: self))
     }
@@ -63,8 +73,5 @@ class GameScene: SKScene {
             print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
         }
     }
-
-    override func update(_ currentTime: TimeInterval) {
-        currentScene!.Update(nodes: self.children)
-    }
+*/
 }

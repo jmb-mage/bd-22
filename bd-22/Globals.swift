@@ -28,4 +28,12 @@ public class Globals {
             SKColor.red,
             SKColor.yellow
         ]
+    
+    public static var zPos:ZPositions = ZPositions()
+}
+
+public class ZPositions {
+    public var Board:CGFloat = 8
+    public var BoardDecorations:CGFloat = 16
+    public var Pieces:CGFloat = 32
 }

@@ -16,11 +16,11 @@ public class BDCell {
     var node: Int = 0
     var id: CGFloat = 0.0
     
-    public init(scene:SKScene, pos:CGPoint, id: CGFloat) {
+    public init(scene:SKScene, pos:CGPoint, id: CGFloat, scalar: CGFloat, zPos: CGFloat) {
         self.region = Int(id)
         self.id = id
         self.node = Int(id * 10.0) - Int(self.region * 10)
-        self.bdNode = BDNode(pos: pos, region: self.region, node: self.node, scalar: 8.0)
+        self.bdNode = BDNode(pos: pos, region: self.region, node: self.node, scalar: scalar, zPos:zPos)
         self.bdText = BDText(pos: pos, id: id)
         scene.addChild(bdNode)
         scene.addChild(bdText)

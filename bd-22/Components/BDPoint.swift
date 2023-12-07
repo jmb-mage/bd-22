@@ -7,8 +7,8 @@
 
 import Foundation
 class BDPoint {
-    public var x:Int;
-    public var y:Int;
+    public var x:CGFloat;
+    public var y:CGFloat;
     
     init() {
         x = 0
@@ -16,6 +16,11 @@ class BDPoint {
     }
     
     init(x: Int, y: Int) {
+        self.x = CGFloat(x)
+        self.y = CGFloat(y)
+    }
+    
+    init(x: CGFloat, y: CGFloat) {
         self.x = x
         self.y = y
     }
@@ -25,6 +30,6 @@ class BDPoint {
     }
     
     public func ToView() -> CGPoint {
-        return CGPoint(x:x + Int(Globals.Transform.width), y:y + Int(Globals.Transform.height))
+        return CGPoint(x:x + Globals.Transform.width, y:y + Globals.Transform.height)
     }
 }
